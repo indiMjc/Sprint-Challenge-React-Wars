@@ -5,6 +5,7 @@ const NextButton = props => {
   const getNextData = url => {
     axios.get(url).then(response => {
       props.setStates(response.data.results);
+      props.setPrev(response.data.previous);
     });
   };
 
