@@ -5,15 +5,18 @@ import Names from "./components/names";
 import BirthYears from "./components/birthyears";
 import Gender from "./components/gender";
 import Mass from "./components/mass";
+import NextButton from "./components/nextButton";
 
 const App = () => {
   const [people, setPeople] = useState([]);
+  const [next, setNext] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://swapi.co/api/people/")
       .then(response => {
         setPeople(response.data.results);
+        setNext(response.data.next);
       })
       .catch(error => {
         console.log("Data not returned", error);
@@ -33,6 +36,7 @@ const App = () => {
           </div>
         ))}
       </div>
+      <NextButton nextSet={next} setStates={setPeople} />
     </div>
   );
 };
