@@ -6,6 +6,7 @@ const PreviousButton = props => {
     axios.get(url).then(response => {
       console.log(response);
       props.setStates(response.data.results);
+      props.setPrev(response.data.previous);
     });
   };
 

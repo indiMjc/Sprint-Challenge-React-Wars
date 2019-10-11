@@ -39,8 +39,17 @@ const App = () => {
           </div>
         ))}
       </div>
-      <PreviousButton prev={previous} setStates={setPeople} />
-      <NextButton nextSet={next} setStates={setPeople} setPrev={setPrevious} />
+      <PreviousButton
+        prev={previous}
+        setStates={setPeople}
+        setPrev={setPrevious}
+      />
+      <NextButton
+        nextSet={next}
+        setStates={setPeople}
+        setPrev={setPrevious}
+        setNextPage={setNext}
+      />
     </div>
   );
 };
