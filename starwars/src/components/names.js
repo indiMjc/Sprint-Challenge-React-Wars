@@ -1,5 +1,6 @@
 import React from "react";
+import { CardTitle } from "reactstrap";
 
-const Names = props => <h2>{props.name}</h2>;
+const Names = props => <CardTitle>{props.name}</CardTitle>;
 
 export default Names;

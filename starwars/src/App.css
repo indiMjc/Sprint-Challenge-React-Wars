@@ -1,8 +1,26 @@
 .App {
   text-align: center;
+  flex-wrap: wrap;
+  max-height: 100vh;
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  max-height: 50vh;
+}
+
+.card-container {
+  width: 160px;
+  height: 13 0px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 5px;
+}
