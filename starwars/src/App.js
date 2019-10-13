@@ -26,16 +26,20 @@ const App = () => {
       });
   }, [setPeople]);
 
+  let keyCount = 0;
+
+  const getKey = () => keyCount++;
+
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
       <div className="cards">
         {people.map((person, i) => (
           <div className="card-container">
-            <Names key={person.name} name={person.name} />
-            <BirthYears key={person.birth_year} birthYear={person.birth_year} />
-            <Gender key={person.gender} genders={person.gender} />
-            <Mass key={person.mass} masses={person.mass} />
+            <Names key={getKey()} name={person.name} />
+            <BirthYears key={getKey()} birthYear={person.birth_year} />
+            <Gender key={getKey()} genders={person.gender} />
+            <Mass key={getKey()} masses={person.mass} />
           </div>
         ))}
       </div>
