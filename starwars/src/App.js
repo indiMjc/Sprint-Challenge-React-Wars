@@ -35,11 +35,15 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
       <div className="cards">
         {people.map((person, i) => (
-          <div className="card-container">
-            <Names key={getKey()} name={person.name} />
-            <BirthYears key={getKey()} birthYear={person.birth_year} />
-            <Gender key={getKey()} genders={person.gender} />
-            <Mass key={getKey()} masses={person.mass} />
+          <div key={getKey()} className="card-container">
+            <Names key={getKey()} keyGen={getKey()} name={person.name} />
+            <BirthYears
+              key={getKey()}
+              keyGen={getKey()}
+              birthYear={person.birth_year}
+            />
+            <Gender key={getKey()} keyGen={getKey()} genders={person.gender} />
+            <Mass key={getKey()} keyGen={getKey()} masses={person.mass} />
           </div>
         ))}
       </div>
